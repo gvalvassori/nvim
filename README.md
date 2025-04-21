@@ -14,7 +14,7 @@ config.
 
 ## Installation
 
-This is a strightforward installation process, simply do
+This is a strightforward installation process, simply run:
 
 ```bash
 git clone https://github.com/gvalvassori/nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
