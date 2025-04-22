@@ -30,3 +30,5 @@ vim.opt.updatetime = 50
 
 -- Disable nvim default statusline
 vim.opt.showmode = false
+
+vim.lsp.inlay_hint.enable(true)

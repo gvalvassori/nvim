@@ -16,7 +16,25 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 local servers = {
 	-- clangd = {},
 	-- gopls = {},
-	basedpyright = {},
+	basedpyright = {
+		settings = {
+			basedpyright = {
+				analysis = {
+					autoSearchPaths = true,
+					useLibraryCodeForTypes = true,
+					extraPaths = { "./src", "./app", "./libs" },
+					typeCheckingMode = "standard",
+					diagnosticMode = "openFilesOnly",
+					inlayHints = {
+						variableTypes = true,
+						functionReturnTypes = true,
+						callArgumentNames = true,
+						genericTypes = true,
+					},
+				},
+			},
+		},
+	},
 	-- rust_analyzer = {},
 	-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 	--
