@@ -21,3 +21,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>p", '"+p')
 vim.keymap.set("i", "<C-p>", "<C-r>+")
+
+vim.keymap.set("n", "<leader>ih", function()
+	local current = vim.lsp.inlay_hint.is_enabled()
+	vim.lsp.inlay_hint.enable(not current)
+end, { desc = "Toggle Inlay Hints" })
